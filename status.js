@@ -94,9 +94,10 @@ function printReceipt() {
   win.document.close();
   win.focus();
   win.print();
-  win.close();
-  // Automatically close the receipt modal after printing
-  closeReceiptModal();
+  setTimeout(() => {
+    win.close();
+    closeReceiptModal();
+  }, 500);
 }
 // Global variable to track current selected room
 let currentRoom = null;
