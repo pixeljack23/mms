@@ -120,11 +120,8 @@ function renderCart() {
         body.appendChild(row);
     });
 
-    const vat = subtotal * 0.16;
-    const grandTotal = subtotal + vat;
-
+    const grandTotal = subtotal;
     document.getElementById("subtotal").innerText = subtotal.toFixed(2);
-    document.getElementById("vat").innerText = vat.toFixed(2);
     document.getElementById("grandTotal").innerText = grandTotal.toFixed(2);
 }
 
@@ -160,7 +157,6 @@ function submitOrder() {
 
     // Build receipt object and save to localStorage so receipt.html can render it
     const subtotal = parseFloat(document.getElementById("subtotal").innerText) || 0;
-    const vat = parseFloat(document.getElementById("vat").innerText) || 0;
     const grandTotal = parseFloat(document.getElementById("grandTotal").innerText) || 0;
 
     const receipt = {
@@ -168,20 +164,18 @@ function submitOrder() {
         type: 'restaurant',
         items: cart.map(i => ({ id: i.id, name: i.name, price: i.price, quantity: i.quantity })),
         subtotal,
-        vat,
         grandTotal,
         paymentMethod,
         timestamp: new Date().toISOString(),
         cashier: localStorage.getItem('username') || localStorage.getItem('name') || localStorage.getItem('role') || 'Cashier'
     };
 
-        // Prepare order for receipt modal
-        const order = {
-            items: cart.map(i => ({ name: i.name, price: i.price, quantity: i.quantity })),
-            subtotal,
-            vat,
-            total: grandTotal
-        };
-        showRestaurantReceiptModal(order);
+    // Prepare order for receipt modal
+    const order = {
+        items: cart.map(i => ({ name: i.name, price: i.price, quantity: i.quantity })),
+        subtotal,
+        total: grandTotal
+    };
+    showRestaurantReceiptModal(order);
         clearCart();
 }
