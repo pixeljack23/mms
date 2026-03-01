@@ -27,7 +27,7 @@ function showRestaurantReceiptModal(order) {
     <div class="r-section"><div style="font-weight:bold;">Order Details:</div>${itemsHtml}</div>
     <div class="r-divider"></div>
     <div class="r-row" style="margin-top:10px;"><span class="r-label">Subtotal:</span> <span class="r-value">KES ${order.subtotal.toLocaleString(undefined, {minimumFractionDigits:2})}</span></div>
-    <div class="r-row"><span class="r-label">VAT (16%):</span> <span class="r-value">KES ${order.vat.toLocaleString(undefined, {minimumFractionDigits:2})}</span></div>
+    <!-- VAT line removed as requested -->
     <div class="r-total">TOTAL: KES ${order.total.toLocaleString(undefined, {minimumFractionDigits:2})}</div>
     <div class="r-divider"></div>
     <div class="r-welcome">Thank you for dining<br>with us!<br><br>PUKORET HOMES</div>
