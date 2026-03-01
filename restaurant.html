@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PUKORET HOMES Restaurant POS</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
         .category-title { margin-top: 20px; font-size: 20px; font-weight: bold; color: #b91c1c; }
     </style>
@@ -69,9 +69,7 @@
             <div style="font-size:var(--font-size-base);color:var(--color-secondary-dark);display:flex;justify-content:space-between;">
                 <span>Subtotal:</span> <span>Ksh <span id="subtotal">0</span></span>
             </div>
-            <div style="font-size:var(--font-size-base);color:var(--color-secondary-dark);display:flex;justify-content:space-between;">
-                <span>VAT (16%):</span> <span>Ksh <span id="vat">0</span></span>
-            </div>
+            <!-- VAT logic and markup fully removed -->
             <div style="font-size:var(--font-size-lg);color:var(--color-primary);font-weight:var(--font-weight-bold);display:flex;justify-content:space-between;">
                 <span>Total:</span> <span>Ksh <span id="grandTotal">0</span></span>
             </div>
@@ -88,8 +86,8 @@
     </aside>
 </main>
 
-<script src="restaurant.js"></script>
-<script src="restaurant.receipt.js"></script>
+<script src="js/restaurant.js"></script>
+<script src="js/restaurant.receipt.js"></script>
 
 <!-- Floating Receipt Modal -->
 <div id="restaurantReceiptModal" class="modal" style="display:none;align-items:center;justify-content:center;">
@@ -168,4 +166,3 @@
 
 </body>
 </html>
-
