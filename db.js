@@ -51,7 +51,6 @@ CREATE TABLE IF NOT EXISTS restaurant_orders (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     order_number TEXT,
     total REAL,
-    vat REAL,
     payment_method TEXT,
     cashier TEXT,
     receipt_number TEXT
