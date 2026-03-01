@@ -35,11 +35,10 @@ function renderReceipt(){
     root.appendChild(table);
 
     const summary = document.createElement('div');
-    summary.innerHTML = `
-      <p class="muted">Subtotal: Ksh ${formatCurrency(r.subtotal)}</p>
-      <p class="muted">VAT: Ksh ${formatCurrency(r.vat)}</p>
-      <h3>Total: Ksh ${formatCurrency(r.grandTotal)}</h3>
-    `;
+      summary.innerHTML = `
+        <p class="muted">Subtotal: Ksh ${formatCurrency(r.subtotal)}</p>
+        <h3>Total: Ksh ${formatCurrency(r.grandTotal)}</h3>
+      `;
     root.appendChild(summary);
   } else if(r.type === 'motel'){
     const info = document.createElement('div');
