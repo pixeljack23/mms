@@ -63,6 +63,8 @@ function printRestaurantReceipt() {
   win.document.close();
   win.focus();
   win.print();
-  win.close();
-  closeRestaurantReceiptModal();
+  setTimeout(() => {
+    win.close();
+    closeRestaurantReceiptModal();
+  }, 500);
 }
