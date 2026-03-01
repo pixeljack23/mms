@@ -4,17 +4,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Room Status</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<nav class="navbar">
-    <div class="logo">PUKORET HOMES</div>
-    <ul class="nav-links">
-               <li><a href="status.html" class="active">Motel</a></li>
-        <li><a href="restaurant.html">Restaurant</a></li>
-    </ul>
-</nav>
+
+<!-- Side vertical icons -->
+<div id="sideNav" style="position:fixed;top:50%;left:0;transform:translateY(-50%);z-index:1200;display:flex;flex-direction:column;gap:18px;padding:12px 0;">
+    <a href="restaurant.html" title="Restaurant" class="side-icon" style="display:flex;align-items:center;justify-content:center;width:54px;height:54px;background:var(--color-primary-lighter);border-radius:50%;box-shadow:var(--shadow-xs);margin-bottom:8px;transition:transform 0.18s, box-shadow 0.18s;">
+        <span style="font-size:2em;">🍴</span>
+    </a>
+    <a href="status.html" title="Motel" class="side-icon active" style="display:flex;align-items:center;justify-content:center;width:54px;height:54px;background:var(--color-primary);border-radius:50%;box-shadow:var(--shadow-xs);color:var(--color-white);font-weight:bold;border:2px solid var(--color-primary-dark);transition:transform 0.18s, box-shadow 0.18s;">
+        <span style="font-size:2em;">🛏️</span>
+    </a>
+</div>
+<style>
+    #sideNav { top: 38%; }
+    .side-icon:hover {
+        transform: scale(1.18);
+        box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+        z-index: 1300;
+    }
+    .side-icon.active {
+        box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+        transform: scale(1.12);
+    }
+</style>
+</div>
 
 <header style="display:flex;align-items:center;justify-content:space-between;padding:var(--spacing-md) var(--spacing-xl);background:var(--color-primary-lighter);border-radius:var(--radius-lg);box-shadow:var(--shadow-xs);margin-bottom:var(--spacing-lg);">
     <h2 style="color:var(--color-primary);font-size:var(--font-size-2xl);font-weight:var(--font-weight-bold);margin:0;">Room Status</h2>
@@ -187,9 +203,9 @@
         </div>
     </div>
 
-<script src="config.js"></script>
-<script src="auth.js"></script>
-<script src="status.js"></script>
+<script src="js/config.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/status.js"></script>
 </body>
 
 <!-- Due Checkouts Section -->
@@ -203,5 +219,4 @@
     </div>
 </section>
 </body>
-
 </html>
