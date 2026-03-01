@@ -1,0 +1,7 @@
+Client (HTML/CSS/JS)
+        |
+        v
+Node.js + Express API
+        |
+        v
+SQLite Database

@@ -1,0 +1,23 @@
+public/
+│
+├── index.html              (Login Page)
+├── dashboard.html          (Role redirect)
+│
+├── admin.html              (Admin Panel)
+├── motel.html              (Motel Cashier Panel)
+├── restaurant.html         (Restaurant Cashier Panel)
+│
+├── receipt-motel.html
+├── receipt-restaurant.html
+│
+├── css/
+│   └── style.css
+│
+└── js/
+    ├── config.js
+    ├── auth.js
+    ├── ui.js
+    ├── api.js
+    ├── motel.js
+    ├── restaurant.js
+    ├── admin.js

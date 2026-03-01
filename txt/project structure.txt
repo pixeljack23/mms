@@ -1,0 +1,25 @@
+motel-system/
+│
+├── server.js
+├── db.js
+├── package.json
+│
+├── /routes
+│   ├── auth.js
+│   ├── rooms.js
+│   ├── bookings.js
+│   ├── menu.js
+│   ├── restaurant.js
+│   └── reports.js
+│
+├── /middleware
+│   └── authMiddleware.js
+│
+├── /public
+│   ├── index.html
+│   ├── dashboard.html
+│   ├── motel.html
+│   ├── restaurant.html
+│   ├── admin.html
+│   ├── css/style.css
+│   └── js/app.js
